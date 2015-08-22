@@ -1,0 +1,69 @@
+<!doctype html>
+<html><!--//  tID 03, no lang attribute  //-->
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <title><!--// tID 65, empty title //--></title>
+
+    <style>
+        .gen::before {
+            content: "foo ";
+        }
+    </style>
+
+</head>
+<body>
+<!--// tID 15 //-->
+<table>
+    <tr>
+        <td>I am a layout table</td>
+    </tr>
+</table>
+
+
+<!--// tID 04, nested tables  //-->
+<table id=" ">
+    <th>
+        <table>
+            <tr>
+                <td>Foo</td>
+            </tr>
+        </table>
+    </th>
+    <tr>
+        <td>Bar</td>
+    </tr>
+</table>
+
+
+<!--// tID 05 //-->
+<object data="foo" type="bar" wmode="transparent"></object>
+<object data="foo" type="bar" wmode="opaque"></object>
+<object data="foo" type="bar"></object>
+<embed src="foo" type="bar" wmode="transparent"/>
+<embed src="foo" type="bar" wmode="opaque"/>
+<embed src="foo" type="bar"/>
+
+
+<!--// tID 06 //-->
+<th id="x_1"></th>
+<th id="x_2"></th>
+<th id="x_5"><img src="foo.gif" alt=""></th>
+<th id="x_6"><img src="foo.gif"></th>
+<th id="x_3" class="visibility-hidden"></th>
+<th id="x_4" class="visibility-hidden"></th>
+
+
+<!--// tID 07 //-->
+<applet code="Bubbles.class" width="350" height="350">
+</applet>
+
+
+<!--// tID 09 //-->
+<img src="https://www.google.com/images/srpr/logo11w.png"/>
+
+</body>
+<script src="js/forms.js"></script>
+</html>

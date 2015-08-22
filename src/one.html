@@ -1,0 +1,86 @@
+<!doctype html>
+<html><!--//  tID 03, no lang attribute  //-->
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <title><!--// tID 65, empty title //--></title>
+
+    <style>
+        .gen::before {
+            content: "foo ";
+        }
+    </style>
+
+</head>
+<body>
+
+<!--// tID 10 //-->
+<img src="https://www.google.com/images/srpr/logo11w.png" alt="https://www.google.com/images/srpr/logo11w.png"/>
+
+
+<!--// tID 11 //-->
+<img src="http://rack.3.mshcdn.com/media/ZgkyMDEyLzEwLzE5LzExXzMzXzMzXzE3Nl9maWxlCnAJdGh1bWIJMTIwMHg5NjAwPg/462b8072.gif"
+     alt="http://rack.3.mshcdn.com/media/ZgkyMDEyLzEwLzE5LzExXzMzXzMzXzE3Nl9maWxlCnAJdGh1bWIJMTIwMHg5NjAwPg/462b8072.gif"/>
+
+
+<!--// tID 12 //-->
+<frameset cols="25%,*,25%">
+    <frame src="frame_a.htm">
+    <frame src="frame_b.htm">
+    <frame src="frame_c.htm">
+</frameset>
+
+
+<!--// tID 13 //-->
+<frameset cols="*,*,*,*,*,*">
+    <frame src="/base/fixtures/markup.html">
+    <frame src="/base/fixtures/markup.html" title="">
+    <frame src="/base/fixtures/markup.html" title=" ">
+    <frame src="/base/fixtures/markup.html" data-title="OMG this is awesome">
+</frameset>
+
+
+<iframe src="/base/fixtures/markup.html" data-title="this is not a title"></iframe>
+<iframe src="/base/fixtures/markup.html"></iframe>
+<!-- no dice -->
+<iframe src="/base/fixtures/markup.html" title=" "></iframe>
+<iframe src="/base/fixtures/markup.html" title=""></iframe>
+
+
+<!--// tID 14 //-->
+<p><font color="white">White</font></p>
+
+<p style="color:#fff"><font color="white">White</font></p>
+
+<p><font color="white"><span style="color:#fff">White</span></font></p>
+
+
+<!--// tID 16 //-->
+<center>1.</center>
+<dir>2.</dir>
+<font>3. </font>
+<strike>4. </strike>
+
+
+<!--// tID 17 //-->
+<fieldset>
+    1. I am a fieldset without a legend
+</fieldset>
+
+
+<!--// tID 19 //-->
+<p>
+    <blink>1. I blink inside a paragraph</blink>
+</p>
+<p>
+    <marquee>2. I marquee inside a paragraph</marquee>
+</p>
+<blink>3. I blink on my own</blink>
+<marquee>4. I marquee on my own</marquee>
+
+
+</body>
+<script src="js/forms.js"></script>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "grunt-tenon-demo",
+  "version": "0.0.1",
+  "description": "Demo of using Grunt with Tenon.io",
+  "keywords": [
+    "accessibility"
+  ],
+  "homepage": "https://github.com/karlgroves/grunt-tenon-demo",
+  "bugs": "https://github.com/karlgroves/grunt-tenon-demo/issues",
+  "author": {
+    "name": "Karl Groves",
+    "email": "karlgroves@gmail.com",
+    "url": "https://github.com/karlgroves"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:karlgroves/grunt-tenon-demo.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-githooks": "^0.3.1",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-tenon-client": "^0.6.1",
+    "jshint-stylish": "~1.0.0",
+    "load-grunt-tasks": "~1.0.0",
+    "tenon-grunt-inline": "^0.1.0",
+    "time-grunt": "~1.0.0"
+  }
+}
