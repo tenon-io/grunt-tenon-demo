@@ -54,7 +54,7 @@ module.exports = function (grunt) {
             }
         },
 
-        /* RUn our accessibility tasks */
+        /* Run our accessibility tasks */
         tenon: {
             /* Set most Tenon options in external file */
             options: {
