@@ -65,7 +65,7 @@ module.exports = function (grunt) {
             responsiveTablet: {
                 options:{
                     viewPortWidth: '1024',
-                    saveOutputIn: 'responsiveTablet.json',
+                    //saveOutputIn: 'responsiveTablet.json',
                 },
                 src: [
                     'src/*.html'
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
             responsivePhone: {
                 options:{
                     viewPortWidth: '320',
-                    saveOutputIn: 'responsivePhone.json',
+                    //saveOutputIn: 'responsivePhone.json',
                 },
                 src: [
                     'src/*.html'
