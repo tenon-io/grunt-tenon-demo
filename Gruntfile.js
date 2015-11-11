@@ -92,6 +92,12 @@ module.exports = function (grunt) {
             },
         },
 
+        shell: {
+            dirListing: {
+                command: 'ls'
+            }
+        },
+
         /* Watch tasks */
         watch: {
             gruntfile: {
