@@ -54,6 +54,17 @@ module.exports = function (grunt) {
             }
         },
 
+        webdriver: {
+            options: {
+                desiredCapabilities: {
+                    browserName: 'chrome'
+                }
+            },
+            all: {
+                tests: ['test/**/*Spec.js'],
+            }
+        },
+
         /* Run our accessibility tasks */
         tenon: {
             /* Set most Tenon options in external file */
@@ -63,9 +74,9 @@ module.exports = function (grunt) {
 
             /* Test accessibility after triggering media query for tablet */
             responsiveTablet: {
-                options:{
+                options: {
                     viewPortWidth: '1024',
-                    //saveOutputIn: 'responsiveTablet.json',
+                    saveOutputIn: 'responsiveTablet.json',
                 },
                 src: [
                     'src/*.html'
@@ -74,9 +85,9 @@ module.exports = function (grunt) {
 
             /* Test accessibility after triggering media query for phone */
             responsivePhone: {
-                options:{
+                options: {
                     viewPortWidth: '320',
-                    //saveOutputIn: 'responsivePhone.json',
+                    saveOutputIn: 'responsivePhone.json',
                 },
                 src: [
                     'src/*.html'
@@ -108,9 +119,9 @@ module.exports = function (grunt) {
                 files: '<%= jshint.src.src %>',
                 tasks: ['jshint:src', 'jshint']
             },
-            html : {
-                files : ['**/*.html'],
-                tasks : ['tenon']
+            html: {
+                files: ['**/*.html'],
+                tasks: ['tenon']
             }
         }
     });

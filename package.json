@@ -21,7 +21,13 @@
       "type": "MIT"
     }
   ],
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
   "devDependencies": {
+    "async": "^1.5.2",
+    "deepmerge": "^0.2.10",
+    "fs-extra": "^0.26.5",
     "grunt": "^0.4.5",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-jshint": "~0.10.0",
@@ -30,12 +36,18 @@
     "grunt-jsonlint": "^1.0.4",
     "grunt-shell": "^1.1.2",
     "grunt-tenon-client": "^0.6.1",
+    "grunt-webdriver": "^1.0.0",
+    "hooker": "^0.2.3",
     "jshint-stylish": "~1.0.0",
     "load-grunt-tasks": "~1.0.0",
+    "mocha": "^2.4.5",
+    "sauce-tunnel": "^2.4.0",
+    "saucelabs": "^1.1.0",
+    "selenium-standalone": "^4.9.0",
     "tenon-grunt-inline": "^0.1.0",
-    "time-grunt": "~1.0.0"
+    "tenon-node": "^0.3.0",
+    "time-grunt": "~1.0.0",
+    "webdriverio": "^3.2.6"
   },
-  "scripts": {
-    "test": "grunt travis --verbose"
-  }
+  "dependencies": {}
 }

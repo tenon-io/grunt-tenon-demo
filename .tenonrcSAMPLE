@@ -1,0 +1,13 @@
+{
+  "key": "PUT-YOUR-API-KEY-HERE",
+  "filter": [31, 54, 79],
+  "apiURL": "https://tenon.io/api/",
+  "certainty":  "40",
+  "level":  "AA",
+  "priority": "40",
+  "ref": "1",
+  "store": "1",
+  "snippet": true,
+  "viewPortWidth": "1280",
+  "projectID": "GRUNT_TENON_DEMO"
+}
