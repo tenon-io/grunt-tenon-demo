@@ -1,9 +1,11 @@
 'use strict';
 
+var fs = require('fs');
+var conf = fs.readFileSync('.tenonrc');
+var cfg = JSON.parse(conf);
 var tenonNode = require('tenon-node'),
     tenonApi = new tenonNode({
-        //@TODO use the key from .tenonrc
-        key: 'c630990d2999c17ee2c4600df0a67ec6'
+        key: cfg.key
     });
 
 module.exports = {
