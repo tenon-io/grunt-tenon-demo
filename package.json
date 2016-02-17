@@ -36,7 +36,7 @@
     "grunt-jsonlint": "^1.0.4",
     "grunt-shell": "^1.1.2",
     "grunt-tenon-client": "^0.6.1",
-    "grunt-webdriver": "^1.0.0",
+    "grunt-webdriver": "^0.5.1",
     "hooker": "^0.2.3",
     "jshint-stylish": "~1.0.0",
     "load-grunt-tasks": "~1.0.0",
@@ -47,7 +47,7 @@
     "tenon-grunt-inline": "^0.1.0",
     "tenon-node": "^0.3.0",
     "time-grunt": "~1.0.0",
-    "webdriverio": "^3.2.6"
+    "webdriverio": "^2.4.5"
   },
   "dependencies": {}
 }
