@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         datetime: Date.now(),
 
         clean: {
-            files: ['dist/*']
+            files: ['tmp/*']
         },
 
         /* Serve up the project on localhost */
@@ -132,13 +132,13 @@ module.exports = function (grunt) {
 
 
 
-    grunt.registerTask('ngrok', 'Test the project URLs on localhost', function() {
+    grunt.registerTask('tenonlive', 'Test the project URLs on localhost using NGrok', function() {
         var done = this.async();
         var config =  JSON.parse(require('fs').readFileSync('.tenonrc', 'utf8'));
 
         ngrok.connect({
             addr: '9001', // port or network address
-            authtoken: ' ' // your authtoken from ngrok.com
+            authtoken: '' // your authtoken from ngrok.com
         }, function (err, url) {
 
             if (err !== null) {
@@ -152,9 +152,10 @@ module.exports = function (grunt) {
             var filenames, i, testUrl;
 
             filenames = glob.readdirSync('/**/*.html');
-            for (i = 0; i < filenames.length; i++) {
+            filenames.forEach(function (fName) {
 
-                testUrl = url + '/' + filenames[i].replace('src/', '');
+                // Although grunt-connect allows us to set the docroot
+                testUrl = url + '/' + fName.replace('src/', '');
 
                 grunt.log.writeln('Test Url: ' + testUrl);
 
@@ -168,7 +169,7 @@ module.exports = function (grunt) {
                     ref: config.ref,
                     store: config.store
                 }).header('Accept', 'application/json').end(function (response) {
-                    grunt.log.writeln('Testing: ' + testUrl);
+                    grunt.log.writeln('Testing: ');
 
                     grunt.log.writeln('Status: ' + response.status);
 
@@ -196,12 +197,11 @@ module.exports = function (grunt) {
                     });
 
                 });
-            }
+            });
 
         });
     });
 
     // Default task.
-    grunt.registerTask('tenonLive', ['connect', 'ngrok']);
     grunt.registerTask('default', ['jshint', 'jsonlint', 'tenon']);
 };
