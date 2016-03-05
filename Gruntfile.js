@@ -5,7 +5,7 @@ var unirest = require('unirest');
 var jsonfile = require('jsonfile');
 var util = require('util');
 var fs = require('fs');
-var glob = require('glob-fs')({ gitignore: true });
+var glob = require('glob-fs')({gitignore: true});
 
 module.exports = function (grunt) {
     // Load all grunt tasks
@@ -84,7 +84,7 @@ module.exports = function (grunt) {
 
             /* Test accessibility after triggering media query for tablet */
             responsiveTablet: {
-                options:{
+                options: {
                     viewPortWidth: '1024',
                     //saveOutputIn: 'responsiveTablet.json',
                 },
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
 
             /* Test accessibility after triggering media query for phone */
             responsivePhone: {
-                options:{
+                options: {
                     viewPortWidth: '320',
                     //saveOutputIn: 'responsivePhone.json',
                 },
@@ -123,18 +123,17 @@ module.exports = function (grunt) {
                 files: '<%= jshint.src.src %>',
                 tasks: ['jshint:src', 'jshint']
             },
-            html : {
-                files : ['**/*.html'],
-                tasks : ['tenon']
+            html: {
+                files: ['**/*.html'],
+                tasks: ['tenon']
             }
         }
     });
 
 
-
-    grunt.registerTask('tenonlive', 'Test the project URLs on localhost using NGrok', function() {
+    grunt.registerTask('tenonlive', 'Test the project URLs on localhost using NGrok', function () {
         var done = this.async();
-        var config =  JSON.parse(require('fs').readFileSync('.tenonrc', 'utf8'));
+        var config = JSON.parse(require('fs').readFileSync('.tenonrc', 'utf8'));
 
         ngrok.connect({
             addr: '9001', // port or network address
@@ -151,14 +150,17 @@ module.exports = function (grunt) {
             // do the loop-de-doo on all the project files
             var filenames, i, testUrl;
 
+            // read all the HTML files in the project
             filenames = glob.readdirSync('/**/*.html');
             filenames.forEach(function (fName) {
 
-                // Although grunt-connect allows us to set the docroot
+                // Although grunt-connect allows us to set the docroot to 'src',
+                // we need to strip that to assemble our test URL
                 testUrl = url + '/' + fName.replace('src/', '');
 
                 grunt.log.writeln('Test Url: ' + testUrl);
 
+                // All of these 'config.*' items come from the .tenonrc file
                 unirest.post(config.apiURL).send({
                     key: config.key,
                     url: testUrl,
@@ -185,6 +187,7 @@ module.exports = function (grunt) {
 
                     var file = 'tmp/' + data.request.responseID + '.json';
 
+                    // write the results to a JSON file
                     jsonfile.writeFile(file, data, function (err) {
                         if (err) {
                             grunt.log.writeln('Error Writing File: ' + err);
