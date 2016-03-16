@@ -137,7 +137,7 @@ module.exports = function (grunt) {
 
         ngrok.connect({
             addr: '9001', // port or network address
-            authtoken: '' // your authtoken from ngrok.com
+            authtoken: '5AaXuMb5dTAff2rfYFBDY_4zTRbQJnyTByNS3GMMuxD' // your authtoken from ngrok.com
         }, function (err, url) {
 
             if (err !== null) {
