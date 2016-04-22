@@ -44,6 +44,10 @@ module.exports = function (grunt) {
             }
         },
 
+
+
+
+
         /* Run tenon before every commit */
         githooks: {
             all: {
