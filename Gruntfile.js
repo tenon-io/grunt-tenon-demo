@@ -45,9 +45,6 @@ module.exports = function (grunt) {
         },
 
 
-
-
-
         /* Run tenon before every commit */
         githooks: {
             all: {
@@ -67,7 +64,7 @@ module.exports = function (grunt) {
 
             /* Test accessibility after triggering media query for tablet */
             responsiveTablet: {
-                options:{
+                options: {
                     viewPortWidth: '1024',
                     //saveOutputIn: 'responsiveTablet.json',
                 },
@@ -78,7 +75,7 @@ module.exports = function (grunt) {
 
             /* Test accessibility after triggering media query for phone */
             responsivePhone: {
-                options:{
+                options: {
                     viewPortWidth: '320',
                     //saveOutputIn: 'responsivePhone.json',
                 },
@@ -112,14 +109,12 @@ module.exports = function (grunt) {
                 files: '<%= jshint.src.src %>',
                 tasks: ['jshint:src', 'jshint']
             },
-            html : {
-                files : ['**/*.html'],
-                tasks : ['tenon']
+            html: {
+                files: ['**/*.html'],
+                tasks: ['tenon']
             }
         }
     });
-
-
 
 
     // Default task.
