@@ -118,5 +118,5 @@ module.exports = function (grunt) {
 
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'jsonlint', 'tenon']);
+    grunt.registerTask('default', ['travis-lint', 'jshint', 'jsonlint', 'tenon']);
 };
