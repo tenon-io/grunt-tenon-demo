@@ -2,7 +2,7 @@
 
 NOTE: This is supposed to say "Build Error", because that's what it demonstrates.
 
-[![Build Status](https://travis-ci.org/karlgroves/grunt-tenon-demo.svg?branch=master)](https://travis-ci.org/karlgroves/grunt-tenon-demo)
+[![Build Status](https://travis-ci.org/tenon-io/grunt-tenon-demo.svg?branch=master)](https://travis-ci.org/tenon-io/grunt-tenon-demo)
 
 
 ## Get a Tenon.io account before continuing
