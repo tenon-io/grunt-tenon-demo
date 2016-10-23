@@ -43,8 +43,7 @@ module.exports = function (grunt) {
                 src: ['bower.json', 'package.json', '.bowerrc', '.jshintrc', '.tenonrc']
             }
         },
-
-
+        
         /* Run tenon before every commit */
         githooks: {
             all: {
@@ -66,7 +65,7 @@ module.exports = function (grunt) {
             responsiveTablet: {
                 options: {
                     viewPortWidth: '1024',
-                    //saveOutputIn: 'responsiveTablet.json',
+                    saveOutputIn: 'responsiveTablet.json',
                 },
                 src: [
                     'src/*.html'
@@ -77,20 +76,19 @@ module.exports = function (grunt) {
             responsivePhone: {
                 options: {
                     viewPortWidth: '320',
-                    //saveOutputIn: 'responsivePhone.json',
+                    saveOutputIn: 'responsivePhone.json',
                 },
                 src: [
                     'src/*.html'
                 ]
             },
-
-
+            
             /* Test em all under default settings */
             all: {
                 src: [
                     'src/*.html'
                 ]
-            },
+            }
         },
 
         shell: {
@@ -115,8 +113,7 @@ module.exports = function (grunt) {
             }
         }
     });
-
-
+    
     // Default task.
     grunt.registerTask('default', ['travis-lint', 'jshint', 'jsonlint', 'tenon']);
 };
