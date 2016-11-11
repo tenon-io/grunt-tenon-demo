@@ -1,5 +1,5 @@
 {
-  "key": "c630990d2999c17ee2c4600df0a67ec6",
+  "key": "YOUR TENON API KEY HERE",
   "filter": [31, 54, 79],
   "apiURL": "https://tenon.io/api/index.php",
   "certainty":  "40",
