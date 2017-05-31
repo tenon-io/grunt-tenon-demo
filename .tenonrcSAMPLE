@@ -1,0 +1,15 @@
+{
+  "key": "PUT YOUR TENON API KEY HERE",
+  "filter": [31, 54, 79],
+  "tenonHost": "https://tenon.io/",
+  "apiURL": "api/index.php",
+  "certainty":  40,
+  "level":  "AA",
+  "priority": 80,
+  "ref": 1,
+  "store": 1,
+  "snippet": true,
+  "viewPortWidth": 1280,
+  "projectID": "DEFAULT_PROJECT",
+  "ngrokToken": "PUT YOUR NGROK AUTH TOKEN HERE"
+}

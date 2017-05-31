@@ -137,7 +137,7 @@ module.exports = function (grunt) {
 
         ngrok.connect({
             addr: '9001', // port or network address
-            authtoken: '5AaXuMb5dTAff2rfYFBDY_4zTRbQJnyTByNS3GMMuxD' // your authtoken from ngrok.com
+            authtoken: config.ngrokToken // your authtoken from ngrok.com
         }, function (err, url) {
 
             if (err !== null) {
@@ -161,7 +161,7 @@ module.exports = function (grunt) {
                 grunt.log.writeln('Test Url: ' + testUrl);
 
                 // All of these 'config.*' items come from the .tenonrc file
-                unirest.post(config.apiURL).send({
+                unirest.post(config.tenonHost + config.apiURL).send({
                     key: config.key,
                     url: testUrl,
                     projectID: config.projectID,
@@ -184,6 +184,10 @@ module.exports = function (grunt) {
                     grunt.log.writeln('Total Errors: ' + data.resultSummary.issues.totalErrors);
                     grunt.log.writeln('Total Warnings: ' + data.resultSummary.issues.totalWarnings);
 
+                    if(config.store === 1){
+                        grunt.log.writeln('View response at: ' + config.tenonHost + '/history.php?responseID=' + data.request.responseID);
+                    }
+                    
                     var file = 'tmp/' + data.request.responseID + '.json';
 
                     // write the results to a JSON file
