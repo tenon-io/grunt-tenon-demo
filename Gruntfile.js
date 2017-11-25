@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                 options: {
                     jshintrc: '.jshintrc'
                 },
-                src: 'Gruntfile.js'
+                src: './Gruntfile.js'
             },
             src: {
                 options: {
@@ -41,16 +41,6 @@ module.exports = function (grunt) {
         jsonlint: {
             configFiles: {
                 src: ['bower.json', 'package.json', '.bowerrc', '.jshintrc', '.tenonrc']
-            }
-        },
-        
-        /* Run tenon before every commit */
-        githooks: {
-            all: {
-                options: {
-                    preventExit: true
-                },
-                'pre-commit': 'tenon'
             }
         },
 
@@ -82,7 +72,7 @@ module.exports = function (grunt) {
                     'src/*.html'
                 ]
             },
-            
+
             /* Test em all under default settings */
             all: {
                 src: [
@@ -113,7 +103,7 @@ module.exports = function (grunt) {
             }
         }
     });
-    
+
     // Default task.
     grunt.registerTask('default', ['travis-lint', 'jshint', 'jsonlint', 'tenon']);
 };
