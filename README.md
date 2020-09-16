@@ -9,7 +9,7 @@ NOTE: This is supposed to say "Build Error", because that's what it demonstrates
 
 If you do not already have an account on Tenon.io, you need one to use this. Head over to [https://tenon.io/register.php](https://tenon.io/register.php). 
 
-Once you're registered and confirmed, get your API key at [http://tenon.io/apikey.php](http://tenon.io/apikey.php)
+Once you're registered and confirmed, get your API key at [https://tenon.io/user/apikey.php](https://tenon.io/user/apikey.php)
 
 ## What this is
 
